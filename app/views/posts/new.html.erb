@@ -1,5 +1,6 @@
-<h1>投稿作成</h1>
+
 <div>
+  <h1>投稿作成</h1>
   <%= form_with model: @post, local: true do |f| %>
     <%= f.text_area :content, rows: 5 %>
     <%= f.file_field :images, multiple: true %><br>

@@ -21,7 +21,9 @@
         -moz-appearance: none;
       }
     }
-
+    .image-preview {
+      max-width: 200px;
+    }
     .submit-block{
 
       display: flex;

@@ -4,19 +4,23 @@
       <div class="content">
           <div class="user-about">
           <div class="image">
-            <%= image_tag "user.jpeg" %>
+            <% if post.user.image.attached? %>
+              <%= image_tag post.user.image %>
+            <% else %>
+              <%= image_tag "8.png" %>
+            <% end %>
           </div>
           <div class="profile">
             <div class="name-learning">
               <div class="name">
-              name
+                <%= post.user.name %>
               </div>
               <div class="learning">
-              gakusyuureki
+                <%= "学習歴： #{post.user.learning}年" %>
               </div>
             </div>
             <div class="purpose">
-            tenndyoku
+              <%= "勉強目的： #{post.user.purpose}" %>
             </div>
           </div>
         </div>
@@ -45,6 +49,3 @@
     </div>
   </div>
 </div>
-
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>

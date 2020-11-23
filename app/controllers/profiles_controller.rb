@@ -26,7 +26,7 @@ class ProfilesController < ApplicationController
   end
 
   def update
-    if @profile = update(profile_params)
+    if @profile.update(profile_params)
       redirect_to root_path, notice: "プロフィールを更新がしました。"
     else
       render :edit
